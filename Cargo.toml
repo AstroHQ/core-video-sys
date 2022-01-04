@@ -4,9 +4,8 @@ version = "0.2.0"
 authors = ["luozijun <luozijun.assistant@gmail.com>", "michael.laifx <cihv2@163.com>"]
 description = "Bindings to CoreVideo.framework for macOS and iOS"
 license = "MIT"
-homepage   = "https://github.com/luozijun/rust-core-video-sys"
-repository = "https://github.com/luozijun/rust-core-video-sys"
-documentation = "https://docs.rs/core-video-sys/*/x86_64-apple-darwin/core-video-sys"
+homepage   = "https://github.com/mihirsamdarshi/rust-core-video-sys"
+repository = "https://github.com/mihirsamdarshi/rust-core-video-sys"
 edition = "2018"
 
 [dependencies]
