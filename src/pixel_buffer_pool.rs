@@ -30,7 +30,7 @@ extern "C" {
     ) -> CVReturn;
     pub fn CVPixelBufferPoolGetAttributes(pool: CVPixelBufferPoolRef) -> CFDictionaryRef;
     pub fn CVPixelBufferPoolGetPixelBufferAttributes(pool: CVPixelBufferPoolRef)
-        -> CFDictionaryRef;
+                                                     -> CFDictionaryRef;
     pub fn CVPixelBufferPoolCreatePixelBuffer(
         allocator: CFAllocatorRef,
         pixelBufferPool: CVPixelBufferPoolRef,

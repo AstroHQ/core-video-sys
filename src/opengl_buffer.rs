@@ -1,10 +1,11 @@
-use crate::{image_buffer::CVImageBufferRef, return_::CVReturn, GLenum, GLint};
 use core_foundation_sys::{
     base::{CFAllocatorRef, CFTypeID},
     dictionary::CFDictionaryRef,
     string::CFStringRef,
 };
 use libc::size_t;
+
+use crate::{GLenum, GLint, image_buffer::CVImageBufferRef, return_::CVReturn};
 
 pub type CVOpenGLBufferRef = CVImageBufferRef;
 // https://developer.apple.com/documentation/appkit/nsopenglcontext/1436158-cglcontextobj?language=objc

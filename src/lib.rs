@@ -1,12 +1,22 @@
 #![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    improper_ctypes
+non_snake_case,
+non_camel_case_types,
+non_upper_case_globals,
+improper_ctypes
 )]
 
 #[macro_use]
 extern crate cfg_if;
+
+pub use self::base::*;
+pub use self::buffer::*;
+pub use self::image_buffer::*;
+pub use self::open_gl_es_texture::*;
+pub use self::open_gl_es_texture_cache::*;
+pub use self::pixel_buffer::*;
+pub use self::pixel_buffer_pool::*;
+pub use self::pixel_format_description::*;
+pub use self::return_::*;
 
 #[cfg(any(target_os = "macos", target_os = "ios"))]
 #[link(name = "CoreVideo", kind = "framework")]
@@ -25,14 +35,6 @@ pub mod pixel_buffer;
 pub mod pixel_buffer_pool;
 pub mod pixel_format_description;
 pub mod return_;
-
-pub use self::base::*;
-pub use self::buffer::*;
-pub use self::image_buffer::*;
-pub use self::pixel_buffer::*;
-pub use self::pixel_buffer_pool::*;
-pub use self::pixel_format_description::*;
-pub use self::return_::*;
 
 cfg_if! {
     if #[cfg(feature = "metal")] {
@@ -79,5 +81,3 @@ cfg_if! {
 pub mod open_gl_es_texture;
 pub mod open_gl_es_texture_cache;
 
-pub use self::open_gl_es_texture::*;
-pub use self::open_gl_es_texture_cache::*;

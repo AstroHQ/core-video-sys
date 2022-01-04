@@ -5,6 +5,7 @@ use crate::{pixel_buffer::CVPixelBufferRef, return_::CVReturn};
 // https://developer.apple.com/documentation/iosurface/iosurfaceref?language=objc
 #[derive(Debug, Copy, Clone)]
 pub enum _IOSurface {}
+
 pub type IOSurfaceRef = *mut _IOSurface;
 
 extern "C" {

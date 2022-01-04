@@ -6,10 +6,10 @@ use core_foundation_sys::{
 };
 use libc::c_void;
 
-use crate::{pixel_buffer::CVPixelBufferRef, OSType};
+use crate::{OSType, pixel_buffer::CVPixelBufferRef};
 
 pub type CVFillExtendedPixelsCallBack =
-    extern "C" fn(pixelBuffer: CVPixelBufferRef, refCon: *mut c_void) -> Boolean;
+extern "C" fn(pixelBuffer: CVPixelBufferRef, refCon: *mut c_void) -> Boolean;
 
 #[repr(C)]
 #[derive(Debug, Clone, Copy)]

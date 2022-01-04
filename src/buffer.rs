@@ -2,9 +2,11 @@ use core_foundation_sys::{base::CFTypeRef, dictionary::CFDictionaryRef, string::
 
 #[derive(Debug, Copy, Clone)]
 pub enum __CVBuffer {}
+
 pub type CVBufferRef = *mut __CVBuffer;
 
 pub type CVAttachmentMode = u32;
+
 pub const kCVAttachmentMode_ShouldNotPropagate: CVAttachmentMode = 0;
 pub const kCVAttachmentMode_ShouldPropagate: CVAttachmentMode = 1;
 
@@ -41,5 +43,4 @@ extern "C" {
         attachmentMode: CVAttachmentMode,
     );
     pub fn CVBufferPropagateAttachments(sourceBuffer: CVBufferRef, destinationBuffer: CVBufferRef);
-
 }

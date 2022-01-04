@@ -6,7 +6,7 @@ use core_foundation_sys::{
 };
 use libc::{c_void, size_t};
 
-use crate::{base::CVOptionFlags, image_buffer::CVImageBufferRef, return_::CVReturn, OSType};
+use crate::{base::CVOptionFlags, image_buffer::CVImageBufferRef, OSType, return_::CVReturn};
 
 const fn as_u32_be(array: &[u8; 4]) -> u32 {
     ((array[0] as u32) << 24)
@@ -116,7 +116,7 @@ pub struct CVPlanarPixelBufferInfo_YCbCrBiPlanar {
 }
 
 pub type CVPixelBufferReleaseBytesCallback =
-    extern "C" fn(releaseRefCon: *mut c_void, baseAddress: *const *const c_void);
+extern "C" fn(releaseRefCon: *mut c_void, baseAddress: *const *const c_void);
 pub type CVPixelBufferReleasePlanarBytesCallback = extern "C" fn(
     releaseRefCon: *mut c_void,
     dataPtr: *const *const c_void,

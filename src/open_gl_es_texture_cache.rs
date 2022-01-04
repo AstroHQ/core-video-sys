@@ -6,8 +6,8 @@ use libc::size_t;
 use objc::runtime::Object;
 
 use crate::{
-    image_buffer::CVImageBufferRef, open_gl_es_texture::CVOpenGLESTextureRef, return_::CVReturn,
     GLenum, GLint, GLsizei,
+    image_buffer::CVImageBufferRef, open_gl_es_texture::CVOpenGLESTextureRef, return_::CVReturn,
 };
 
 pub type CVOpenGLESTextureCacheRef = CFTypeRef;

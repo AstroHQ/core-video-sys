@@ -1,6 +1,6 @@
 use core_foundation_sys::base::{Boolean, CFTypeID};
 
-use crate::{image_buffer::CVImageBufferRef, GLenum, GLuint};
+use crate::{GLenum, GLuint, image_buffer::CVImageBufferRef};
 
 pub type CVOpenGLESTextureRef = CVImageBufferRef;
 
@@ -18,5 +18,4 @@ extern "C" {
     //    GLfloat lowerRight[ 2],
     //    GLfloat upperRight[ 2],
     //    GLfloat upperLeft[ 2] );
-
 }

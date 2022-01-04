@@ -1,11 +1,13 @@
-use crate::{CVReturn, CVTime};
 use core_foundation_sys::base::CFTypeID;
+
+use crate::{CVReturn, CVTime};
 
 // avoid depending on core-graphics
 pub type CGDirectDisplayID = u32;
 
 #[derive(Debug, Copy, Clone)]
 pub enum __CVDisplayLink {}
+
 pub type CVDisplayLinkRef = *mut __CVDisplayLink;
 
 extern "C" {
@@ -15,6 +17,6 @@ extern "C" {
         displayLinkOut: *mut CVDisplayLinkRef,
     ) -> CVReturn;
     pub fn CVDisplayLinkGetNominalOutputVideoRefreshPeriod(displayLink: CVDisplayLinkRef)
-        -> CVTime;
+                                                           -> CVTime;
     pub fn CVDisplayLinkRelease(displayLink: CVDisplayLinkRef);
 }

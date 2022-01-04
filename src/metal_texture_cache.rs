@@ -1,13 +1,14 @@
-use crate::{
-    base::CVOptionFlags, image_buffer::CVImageBufferRef, metal_texture::CVMetalTextureRef,
-    return_::CVReturn,
-};
 use core_foundation_sys::{
     base::{CFAllocatorRef, CFTypeID, CFTypeRef},
     dictionary::CFDictionaryRef,
     string::CFStringRef,
 };
 use libc::size_t;
+
+use crate::{
+    base::CVOptionFlags, image_buffer::CVImageBufferRef, metal_texture::CVMetalTextureRef,
+    return_::CVReturn,
+};
 
 pub type CVMetalTextureCacheRef = CFTypeRef;
 

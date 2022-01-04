@@ -19,5 +19,4 @@ extern "C" {
     //                                                float lowerRight[2],
     //                                                float upperRight[2],
     //                                                float upperLeft[2] ) API_AVAILABLE(macosx(10.11), ios(8.0), tvos(9.0)) __WATCHOS_PROHIBITED;
-
 }
