@@ -2,8 +2,7 @@ use core_foundation_sys::{
     base::{CFAllocatorRef, CFTypeRef},
     dictionary::CFDictionaryRef,
 };
-use libc::size_t;
-use objc::runtime::Object;
+use libc::{c_void, size_t};
 
 use crate::{
     GLenum, GLint, GLsizei,
@@ -11,7 +10,7 @@ use crate::{
 };
 
 pub type CVOpenGLESTextureCacheRef = CFTypeRef;
-pub type CVEAGLContext = *mut Object;
+pub type CVEAGLContext = *mut c_void;
 
 extern "C" {
     pub fn CVOpenGLESTextureCacheCreate(
