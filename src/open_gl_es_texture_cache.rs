@@ -5,8 +5,8 @@ use core_foundation_sys::{
 use libc::{c_void, size_t};
 
 use crate::{
-    GLenum, GLint, GLsizei,
     image_buffer::CVImageBufferRef, open_gl_es_texture::CVOpenGLESTextureRef, return_::CVReturn,
+    GLenum, GLint, GLsizei,
 };
 
 pub type CVOpenGLESTextureCacheRef = CFTypeRef;

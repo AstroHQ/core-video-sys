@@ -17,6 +17,6 @@ extern "C" {
         displayLinkOut: *mut CVDisplayLinkRef,
     ) -> CVReturn;
     pub fn CVDisplayLinkGetNominalOutputVideoRefreshPeriod(displayLink: CVDisplayLinkRef)
-                                                           -> CVTime;
+        -> CVTime;
     pub fn CVDisplayLinkRelease(displayLink: CVDisplayLinkRef);
 }
