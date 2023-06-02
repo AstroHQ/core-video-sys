@@ -195,6 +195,8 @@ extern "C" {
 
     pub fn CVPixelBufferGetBaseAddress(pixelBuffer: CVPixelBufferRef) -> *mut c_void;
     pub fn CVPixelBufferGetBytesPerRow(pixelBuffer: CVPixelBufferRef) -> size_t;
+    pub fn CVPixelBufferGetDataSize(pixelBuffer: CVPixelBufferRef) -> size_t;
+
     pub fn CVPixelBufferIsPlanar(pixelBuffer: CVPixelBufferRef) -> Boolean;
     pub fn CVPixelBufferGetPlaneCount(pixelBuffer: CVPixelBufferRef) -> size_t;
     pub fn CVPixelBufferGetWidthOfPlane(
