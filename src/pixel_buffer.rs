@@ -161,16 +161,18 @@ extern "C" {
         pixelBufferAttributes: CFDictionaryRef,
         pixelBufferOut: *mut CVPixelBufferRef,
     ) -> CVReturn;
-    // pub fn CVPixelBufferCreateWithBytes(allocator: CFAllocatorRef,
-    //                                     width: size_t,
-    //                                     height: size_t,
-    //                                     pixelFormatType: OSType,
-    //                                     baseAddress: *const c_void,
-    //                                     bytesPerRow: size_t,
-    //                                     releaseCallback: CVPixelBufferReleaseBytesCallback,
-    //                                     releaseRefCon: *const c_void,
-    //                                     pixelBufferAttributes: CFDictionaryRef,
-    //                                     pixelBufferOut: *mut CVPixelBufferRef) -> CVReturn;
+    pub fn CVPixelBufferCreateWithBytes(
+        allocator: CFAllocatorRef,
+        width: size_t,
+        height: size_t,
+        pixelFormatType: OSType,
+        baseAddress: *const c_void,
+        bytesPerRow: size_t,
+        releaseCallback: CVPixelBufferReleaseBytesCallback,
+        releaseRefCon: *const c_void,
+        pixelBufferAttributes: CFDictionaryRef,
+        pixelBufferOut: *mut CVPixelBufferRef,
+    ) -> CVReturn;
     // pub fn CVPixelBufferCreateWithPlanarBytes(allocator: CFAllocatorRef,
     //                                           width: size_t,
     //                                           height: size_t,
