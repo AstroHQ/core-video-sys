@@ -1,7 +1,7 @@
 # rust-core-video-sys
 
 Rust bindings to
-the [CoreVideo](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CoreVideo_Reference/index.html)
+the [CoreVideo](https://developer.apple.com/documentation/corevideo/)
 framework
 
 ### Acknowledgements
